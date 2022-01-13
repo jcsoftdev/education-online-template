@@ -8,7 +8,6 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar links={rutas.links} />
-
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>

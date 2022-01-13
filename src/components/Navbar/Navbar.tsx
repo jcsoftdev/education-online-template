@@ -1,17 +1,15 @@
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
-import {
-  MenuIcon,
-  XIcon,
-} from '@heroicons/react/outline'
+import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { Link, NavLink } from 'react-router-dom'
 import { SubLinkMobile, SubLink } from './SubLink'
 import { NavbarProps } from './SubLink/types'
+import Wrapper from '../Wrapper'
 
 const Navbar = ({ links = [] }: NavbarProps) => {
   return (
     <Popover className="relative bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <Wrapper>
         <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="#">
@@ -44,34 +42,23 @@ const Navbar = ({ links = [] }: NavbarProps) => {
                 </NavLink>
               )
             })}
-            {/* <SubLink links={solutions} />
-
-            <NavLink
-              to="#"
-              className="text-base font-medium text-gray-500 hover:text-gray-900"
-            >
-              Pricing
-            </NavLink> */}
-
-            {/* <SubLink links={resources} /> */}
           </Popover.Group>
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
             <a
               href="#"
               className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
             >
-              Sign in
+              Iniciar Sesión
             </a>
             <a
               href="#"
               className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
             >
-              Sign up
+              Registrarme
             </a>
           </div>
         </div>
-      </div>
-
+      </Wrapper>
       <Transition
         as={Fragment}
         enter="duration-200 ease-out"
@@ -108,19 +95,21 @@ const Navbar = ({ links = [] }: NavbarProps) => {
                     return item?.subLinks ? (
                       <SubLinkMobile key={item.id} links={item.subLinks} />
                     ) : (
-                      <NavLink
-                        key={item.id}
-                        to={item.to || ''}
-                        className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
-                      >
-                        <item.Icon
-                          className="flex-shrink-0 h-6 w-6 text-indigo-600"
-                          aria-hidden="true"
-                        />
-                        <span className="ml-3 text-base font-medium text-gray-900">
-                          {item.name}
-                        </span>
-                      </NavLink>
+                      <Popover.Button key={item.id}>
+                        <NavLink
+                          
+                          to={item.to || ''}
+                          className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
+                        >
+                          <item.Icon
+                            className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                            aria-hidden="true"
+                          />
+                          <span className="ml-3 text-base font-medium text-gray-900">
+                            {item.name}
+                          </span>
+                        </NavLink>
+                      </Popover.Button>
                     )
                   })}
                 </nav>
@@ -128,18 +117,25 @@ const Navbar = ({ links = [] }: NavbarProps) => {
             </div>
             <div className="py-6 px-5 space-y-6">
               <div>
-                <Link
-                  to="/login"
-                  className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
-                >
-                  Sign up
-                </Link>
-                <p className="mt-6 text-center text-base font-medium text-gray-500">
-                  Existing customer?{' '}
-                  <a href="#" className="text-indigo-600 hover:text-indigo-500">
-                    Sign in
-                  </a>
+                <p className="text-center text-base font-medium text-gray-500">
+                  ¿Ya tienes cuenta?{' '}
+                  <Popover.Button>
+                    <Link
+                      to="/login"
+                      className="text-indigo-600 hover:text-indigo-500"
+                    >
+                      Iniciar de Sesión
+                    </Link>
+                  </Popover.Button>
                 </p>
+                <Popover.Button>
+                  <Link
+                    to="/signup"
+                    className="mt-6  w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+                  >
+                    Registrarme
+                  </Link>
+                </Popover.Button>
               </div>
             </div>
           </div>
