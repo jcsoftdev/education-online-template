@@ -10,7 +10,7 @@ const Navbar = ({ links = [] }: NavbarProps) => {
   return (
     <Popover className="relative bg-white">
       <Wrapper>
-        <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
+        <div className="flex justify-between items-center border-b-2 border-gray-100 py-2 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="#">
               <span className="sr-only">Workflow</span>
@@ -29,7 +29,6 @@ const Navbar = ({ links = [] }: NavbarProps) => {
           </div>
           <Popover.Group as="nav" className="hidden md:flex space-x-10">
             {links.map((item) => {
-              console.log(item)
               return item?.subLinks ? (
                 <SubLink key={item.id} links={item.subLinks} name={item.name} />
               ) : (
