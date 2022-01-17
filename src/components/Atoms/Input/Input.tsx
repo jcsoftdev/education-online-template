@@ -8,7 +8,7 @@ const Input = ({id, className, label,placeholder, ...rest}: InputProps) => {
       </label>
       <input
         {...rest}
-        className={`appearance-none rounded-none block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm ${className}`}
+        className={`appearance-none rounded-none block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-[#ff7429] focus:border-[#ff7429] focus:z-10 sm:text-sm ${className}`}
         placeholder={placeholder || label}
       />
     </div>

@@ -16,7 +16,7 @@ const Navbar = ({ links = [] }: NavbarProps) => {
               <span className="sr-only">Workflow</span>
               <img
                 className="h-8 w-auto sm:h-10"
-                src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                src="https://umachay.net/wp-content/uploads/2020/11/logo-con-texto.png"
                 alt=""
               />
             </a>
@@ -51,7 +51,7 @@ const Navbar = ({ links = [] }: NavbarProps) => {
             </Link>
             <Link
               to="/signup"
-              className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+              className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-[#F5671B] hover:[#E81946] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#ff7429]"
             >
               Registrarme
             </Link>
@@ -101,7 +101,7 @@ const Navbar = ({ links = [] }: NavbarProps) => {
                           className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                         >
                           <item.Icon
-                            className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                            className="flex-shrink-0 h-6 w-6 text-[#F5671B] hover:[#E81946]"
                             aria-hidden="true"
                           />
                           <span className="ml-3 text-base font-medium text-gray-900">
@@ -121,13 +121,13 @@ const Navbar = ({ links = [] }: NavbarProps) => {
                   <Popover.Button>
                     <Link
                       to="/login"
-                      className="text-indigo-600 hover:text-indigo-500"
+                      className="text-[#F5671B] hover:[#E81946]"
                     >
                       Iniciar de Sesión
                     </Link>
                   </Popover.Button>
                 </p>
-                <Popover.Button className={`mt-6  w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700`}>
+                <Popover.Button className={`mt-6  w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-[#F5671B] hover:[#E81946] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#ff7429]`}>
                   <Link
                     to="/signup"
                     className=""

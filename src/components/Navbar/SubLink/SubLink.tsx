@@ -24,7 +24,7 @@ const SubLink = ({
           <Popover.Button
             className={classNames(
               open ? 'text-gray-900' : 'text-gray-500',
-              'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500',
+              'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#ff7429]',
             )}
           >
             <span>{name}</span>
@@ -53,10 +53,10 @@ const SubLink = ({
                     <NavLink
                       key={item.id}
                       to={item.to}
-                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-[#FEF0E3] "
                     >
                       <item.Icon
-                        className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                        className="flex-shrink-0 h-6 w-6 text-[#F5671B] "
                         aria-hidden="true"
                       />
                       <div className="ml-4">

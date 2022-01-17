@@ -1,0 +1,8 @@
+.BackgroundImage {
+  background-image: url(https://umachay.net/wp-content/uploads/2020/12/Copia-de-Copia-de-Sin-titulo.jpg);
+  height: calc(100vh - 60px);
+}
+
+.BackgroundImage > div {
+  background-color: rgba(0, 0, 0, 0.6);
+}

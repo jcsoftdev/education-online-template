@@ -10,7 +10,7 @@ const Signup = () => {
           <div>
             <img
               className="mx-auto h-12 w-auto"
-              src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+              src="https://umachay.net/wp-content/uploads/2020/11/logo-con-texto.png"
               alt="Workflow"
             />
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
@@ -77,7 +77,7 @@ const Signup = () => {
               <span>¿ya tienes una cuenta? </span>
               <Link
                 to="/signup"
-                className="font-medium text-indigo-600 hover:text-indigo-500"
+                className="font-medium text-[#ff7429] hover:text-[#E81946]"
               >
                 Iniciar Sesión
               </Link>

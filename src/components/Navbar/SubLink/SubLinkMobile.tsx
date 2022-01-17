@@ -9,10 +9,10 @@ const SubLinkMobile = ({ links }: { links: SubLinksI[] }) => {
         <Popover.Button  key={item.id}>
           <NavLink
             to={item.to}
-            className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
+            className="-m-3 p-3 flex items-center rounded-md hover:bg-[#FEF0E3] "
           >
             <item.Icon
-              className="flex-shrink-0 h-6 w-6 text-indigo-600"
+              className="flex-shrink-0 h-6 w-6 text-[#F5671B]"
               aria-hidden="true"
             />
             <span className="ml-3 text-base font-medium text-gray-900">
