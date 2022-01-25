@@ -1,7 +1,8 @@
 import { ChartBarIcon, CursorClickIcon, HomeIcon, RefreshIcon, ShieldCheckIcon, ViewGridIcon } from "@heroicons/react/outline";
+import { NavbarProps } from "./components/Navbar/SubLink/types";
 
 
-export const rutas = {
+export const rutas: NavbarProps = {
   links: [
     {
       id: "home",
@@ -10,42 +11,12 @@ export const rutas = {
       Icon: HomeIcon,
       to: "/"
     },
-    {
-      id: '1',
-      name: "Cursos",
-      description: "About",
-      Icon: HomeIcon,
-      subLinks: [
-        {
-          id: '11',
-          name: "Analitycs",
-          description: "Analitycs",
-          to: "/analytics",
-          Icon: CursorClickIcon
-        },
-        {
-          id: '12',
-          name: "Engagement",
-          description: "Engagement",
-          to: "/analytics",
-          Icon: ShieldCheckIcon
-        },
-        {
-          id: '13',
-          name: "Security",
-          description: "Security",
-          to: "/sec",
-          Icon: ViewGridIcon
-        },
-
-      ]
-    },
     
     {
       id: '3',
-      name: "Suscripcion",
+      name: "Cursos",
       description: "Suscription",
-      to: "/suscription",
+      to: "/cursos",
       Icon: RefreshIcon
     },
     {
