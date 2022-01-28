@@ -1,9 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Card from '../Atoms/Card'
 import { CourseProps } from './types'
 
-const Course: React.FC<CourseProps> = ({ description, image, nombre }) => {
+const Course: React.FC<CourseProps> = ({ description, image, nombre, id_curso }) => {
   return (
+    <Link to={{pathname:'/cursos/'+id_curso, }}>
     <Card>
       <div className="group ">
         <div className=" w-full h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
@@ -21,6 +23,7 @@ const Course: React.FC<CourseProps> = ({ description, image, nombre }) => {
         <p className="text-base font-semibold text-gray-900">{description}</p>
       </div>
     </Card>
+    </Link>
   )
 }
 
